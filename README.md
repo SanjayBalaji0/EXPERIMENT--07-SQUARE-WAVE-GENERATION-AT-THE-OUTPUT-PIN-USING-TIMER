@@ -225,6 +225,7 @@ void assert_failed(uint8_t *file, uint32_t line)
  ![alt text](<Screenshot 2025-10-24 133604.png>)
 
 ## DUTY CYCLE AND FREQUENCY CALCULATION 
+<<<<<<< HEAD
 
 ![alt text](<Screenshot 2025-11-18 163114.png>)
 
@@ -280,6 +281,16 @@ DUTY CYCLE = TON /(TON+TOFF)
            = 0.9
       IN % =0.9*100 
            = 90 %
+=======
+```
+50%
+Ton+Toff=Ttotal
+f=1/Ttotal
+3.1 * 0.1ms+3.1 * 0.1ms=0.62ms
+f=1/(0.62*10^-3)= 1.612*10^3=1.61kHz
+D=Ton/Ttotal=.31/.62=.5
+%D=50%
+>>>>>>> b47342ec3722ba99543ac34a232be1cbf50e5c45
 ```
 
 ## Result :
