@@ -221,20 +221,66 @@ void assert_failed(uint8_t *file, uint32_t line)
 ## Output screen shots of proteus  :
  
  ![alt text](<Screenshot 2025-10-24 133544.png>)
- ![alt text](<Screenshot 2025-10-24 133349.png>)
-
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
  ![alt text](<Screenshot 2025-10-24 133604.png>)
 
 ## DUTY CYCLE AND FREQUENCY CALCULATION 
-50%
-Ton+Toff=Ttotal
-f=1/Ttotal
-3.1 * 0.1ms+3.1 * 0.1ms=0.62ms
-f=1/(0.62*10^-3)= 1.612*10^3=1.61kHz
-D=Ton/Ttotal=.31/.62=.5
-%D=50%
 
+![alt text](<Screenshot 2025-11-18 163114.png>)
+
+```
+TON = 3 x 10 x 10^-6
+    = 0.00003
+TOFF=0.00003
+TOTAL TIME = TON + TOFF
+           = 0.00003+0.00003 
+           = 0.00006
+FREQUENCY = 1/(TOTAL TIME) 
+          =1/0.00006 
+          = 16666.7
+DUTY CYCLE = TON /(TON+TOFF)
+           = 0.00003/0.00006
+           = 0.5
+      IN % =0.5*100 
+           = 50 %
+```
+
+![alt text](<Screenshot 2025-11-18 163120.png>)
+
+```
+TON = 4 x 10 x 10^-6
+    = 0.00004
+TOFF= 2 x 10 x 10^-6
+    = 0.00002
+TOTAL TIME = TON + TOFF
+           = 0.00004+0.00002
+           = 0.00006
+FREQUENCY = 1/(TOTAL TIME)
+          = 16666.7
+DUTY CYCLE = TON /(TON+TOFF)
+           = 0.00004/0.00006
+           = 0.7
+      IN % =0.7*100 
+           = 70 %
+```
+![alt text](<Screenshot 2025-11-18 163126.png>)
+
+```
+TON = 1 x 50 x 10^-6
+    = 0.00005
+TOFF= 0.1 x 50 x 10^-6
+    = 0.000005
+TOTAL TIME = TON + TOFF
+           = 0.00005 + 0.000005
+           = 0.000055
+FREQUENCY = 1/(TOTAL TIME)
+          = 18181.82
+DUTY CYCLE = TON /(TON+TOFF)
+           = 0.00005/0.000055
+           = 0.9
+      IN % =0.9*100 
+           = 90 %
+```
 
 ## Result :
 A PWM Signal is generated using the following frequency and various duty cycles are simulated 
